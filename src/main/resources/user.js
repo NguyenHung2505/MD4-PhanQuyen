@@ -65,6 +65,8 @@ function loginUser() {
             console.log(data)
             localStorage.setItem('token', data.accessToken)
             localStorage.setItem('id', data.id)
+            localStorage.setItem('user', usernameLogin)
+            localStorage.setItem('pass', passwordLogin)
             write()
         },
         error: function (error) {
@@ -107,8 +109,9 @@ function roleUser() {
         url: "http://localhost:8081/users",
         success: function (data) {
             console.log(data)
-            writeUser(data)
-            showBlogContent()
+            //  chuyen trang laay du lieu tu 1 trang khac
+            location.replace("Main.html");
+            // showBlogContent()
         },
         error: function (error) {
             document.getElementById("content").innerHTML = `<h4>Bạn không có quyền ở đây<\h4>`
@@ -124,3 +127,4 @@ function writeUser(data) {
     }
     document.getElementById("content").innerHTML = str
 }
+
