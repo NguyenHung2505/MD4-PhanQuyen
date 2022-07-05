@@ -38,9 +38,24 @@ function register() {
 
 function showLoginForm() {
     let str = `
-       <input type="text" id="usernameLogin" name="username" placeholder="Username">
-        <input type="password" id="passwordLogin" name="password" placeholder="Password">
-        <button type="submit" onclick="loginUser()">Login</button>
+
+
+<div style="border: solid blue 1px; text-align: center ; width: 50% ; height: 200px  ">
+                        <p class="hint-text">Form Đăng Nhập</p>
+                        <div class="form-group">
+                              <input type="text" id="usernameLogin" name="username" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="passwordLogin" name="password" placeholder="Password">
+                        </div>
+                               <button type="submit" onclick="loginUser()">Login</button>                  
+</div>
+              
+              
+<!--    <input type="text" id="usernameLogin" name="username" placeholder="Username">-->
+<!--      <input type="password" id="passwordLogin" name="password" placeholder="Password">-->
+<!--       <button type="submit" onclick="loginUser()">Login</button>-->
+
 `
     content.innerHTML = str
 }
@@ -77,8 +92,17 @@ function loginUser() {
 }
 
 function write() {
-    let str = `<button onclick="roleUser()">User</button>
-    <button onclick="roleAdmin()">Admin</button>`
+    let str = `
+<div style="border: solid blue 1px; text-align: center ; width: 45% ; height: 250px  ">
+<br>
+<div>BẠN<div>LÀ<div>gì?</div></div></div>
+<br>
+<button onclick="roleUser()">User</button>
+<br>
+<br>
+<button onclick="roleAdmin()">Admin</button>
+</div>
+`
     content.innerHTML = str
 }
 
@@ -127,4 +151,14 @@ function writeUser(data) {
     }
     document.getElementById("content").innerHTML = str
 }
+
+
+////hien thi them sua xoa Admin
+
+
+
+
+
+
+
 
